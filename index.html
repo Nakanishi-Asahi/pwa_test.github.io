@@ -6,6 +6,14 @@
 　　<!-- vue.js　-->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="manifest" href="manifest.json">
+    <script>
+    if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+    }
+    </script>
     <title>PWA Sample</title>
   </head>
   <body>
